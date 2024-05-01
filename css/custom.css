@@ -1,7 +1,29 @@
 
 /** ADD YOUR AWESOME CODES HERE **/
 
-/* DevOps Skills Section Styling */
+/* Modern Gradient Background for Banner - Fullstack Developer Theme (Red/Pink) */
+.main-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.9) 0%, rgba(238, 90, 111, 0.9) 50%, rgba(196, 69, 105, 0.9) 100%);
+    z-index: 1;
+}
+
+.main-banner .heading {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fullstack Developer Skills Section Styling */
 .skills-section {
     margin-top: 30px;
 }
@@ -10,49 +32,120 @@
     color: #333;
     font-weight: 600;
     margin-bottom: 20px;
+    font-size: 1.3em;
 }
 
 .skills-section h4 i {
     margin-right: 10px;
-    color: #4a90e2;
+    color: #ff6b6b;
 }
 
-.skills-section span {
-    background: #f4f4f4;
-    padding: 8px 15px;
-    border-radius: 5px;
+.skill-badge {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 10px 18px;
+    border-radius: 25px;
     display: inline-block;
     margin: 5px;
     font-size: 14px;
     color: #333;
     transition: all 0.3s ease;
-    border: 1px solid #e0e0e0;
+    border: 2px solid transparent;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.skills-section span:hover {
-    background: #4a90e2;
+.skill-badge:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+    border-color: #ff6b6b;
 }
 
-.skills-section span i {
-    margin-right: 5px;
+.skill-badge i {
+    margin-right: 6px;
+    font-size: 16px;
 }
 
-/* Service Icons Enhancement */
+/* Service Icons Enhancement - Fullstack Theme */
+.services-inner-box {
+    transition: all 0.3s ease;
+    padding: 30px 20px;
+    border-radius: 15px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.services-inner-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.25);
+    border-top-color: #ff6b6b;
+}
+
 .services-inner-box .ser-icon {
     margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.services-inner-box .ser-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    opacity: 0.3;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
 
 .services-inner-box .ser-icon i {
-    color: #4a90e2;
+    color: #fff;
     transition: all 0.3s ease;
+    font-size: 40px;
+    z-index: 1;
+    position: relative;
+}
+
+.services-inner-box:hover .ser-icon {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .services-inner-box:hover .ser-icon i {
-    color: #2c5aa0;
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+.services-inner-box h2 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.services-inner-box p {
+    color: #666;
+    line-height: 1.8;
 }
 
 /* Social Links Styling */
@@ -62,20 +155,424 @@
 
 .social-links a {
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .social-links a:hover {
-    color: #4a90e2 !important;
-    transform: scale(1.2);
+    color: #ff6b6b !important;
+    transform: scale(1.2) rotate(5deg);
 }
 
-/* GitHub Button Enhancement */
+/* GitHub Button Enhancement - Fullstack Theme */
 .sim-btn.btn-hover-new {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.sim-btn.btn-hover-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #c44569 0%, #ee5a6f 50%, #ff6b6b 100%);
 }
 
 .sim-btn.btn-hover-new i {
     font-size: 18px;
+}
+
+/* Section Title Enhancement */
+.section-title h3 {
+    color: #333;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title.text-center h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    border-radius: 2px;
+}
+
+.section-title.text-left h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    border-radius: 2px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.section-title.text-center {
+    text-align: center;
+}
+
+.section-title.text-center h2 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title.text-center h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    border-radius: 2px;
+}
+
+/* About Section Enhancement */
+.message-box h2 {
+    color: #333;
+    font-weight: 700;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.message-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    border-radius: 2px;
+}
+
+.message-box p {
+    color: #555;
+    line-height: 1.9;
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+/* Navbar Brand Enhancement */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+    color: #ffd93d;
+}
+
+/* Banner Heading Enhancement */
+.main-banner .heading h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.main-banner .heading p {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.main-banner .heading h3 {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Contact Section Enhancement */
+#contact {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Fullstack Developer Icon Art Container */
+.fullstack-icon-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(238, 90, 111, 0.1) 50%, rgba(196, 69, 105, 0.1) 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.icon-stack {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullstack-icon-main {
+    font-size: 120px;
+    color: #ff6b6b;
+    position: relative;
+    z-index: 5;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.cloud-icon-1 {
+    position: absolute;
+    font-size: 40px;
+    color: #c44569;
+    top: 20px;
+    right: 30px;
+    z-index: 3;
+    animation: float 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+    opacity: 0.8;
+}
+
+.cloud-icon-2 {
+    position: absolute;
+    font-size: 35px;
+    color: #ee5a6f;
+    bottom: 30px;
+    left: 20px;
+    z-index: 3;
+    animation: float 2.5s ease-in-out infinite;
+    animation-delay: 1s;
+    opacity: 0.8;
+}
+
+.frontend-icon {
+    position: absolute;
+    font-size: 30px;
+    color: #ff6b6b;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    z-index: 4;
+    animation: float 2.2s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+.kubernetes-icon {
+    position: absolute;
+    font-size: 35px;
+    color: #326ce5;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    z-index: 4;
+    animation: float 2.8s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.floating-icons i {
+    position: absolute;
+    font-size: 28px;
+    color: rgba(255, 107, 107, 0.6);
+    animation: floatAround 8s ease-in-out infinite;
+}
+
+.floating-icons i:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+    color: rgba(196, 69, 105, 0.6);
+}
+
+.floating-icons i:nth-child(2) {
+    top: 20%;
+    right: 15%;
+    animation-delay: 2s;
+    color: rgba(238, 90, 111, 0.6);
+}
+
+.floating-icons i:nth-child(3) {
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 4s;
+    color: rgba(255, 107, 107, 0.6);
+}
+
+.floating-icons i:nth-child(4) {
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 6s;
+    color: rgba(196, 69, 105, 0.6);
+}
+
+.floating-icons i:nth-child(5) {
+    top: 50%;
+    left: 5%;
+    animation-delay: 1s;
+    color: rgba(238, 90, 111, 0.6);
+}
+
+.floating-icons i:nth-child(6) {
+    top: 60%;
+    right: 5%;
+    animation-delay: 3s;
+    color: rgba(255, 107, 107, 0.6);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatAround {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translate(20px, -20px) rotate(90deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-15px, -30px) rotate(180deg);
+        opacity: 1;
+    }
+    75% {
+        transform: translate(-20px, 15px) rotate(270deg);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-banner .heading h1 {
+        font-size: 2.5em;
+    }
+    
+    .section-title h3 {
+        font-size: 2em;
+    }
+    
+    .services-inner-box {
+        margin-bottom: 30px;
+    }
+    
+    .services-inner-box .ser-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .services-inner-box .ser-icon i {
+        font-size: 32px;
+    }
+    
+    .fullstack-icon-container {
+        height: 300px;
+        padding: 20px;
+    }
+    
+    .fullstack-icon-main {
+        font-size: 80px;
+    }
+    
+    .cloud-icon-1, .cloud-icon-2 {
+        font-size: 28px;
+    }
+    
+    .frontend-icon, .kubernetes-icon {
+        font-size: 24px;
+    }
+    
+    .floating-icons i {
+        font-size: 20px;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services-inner-box {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.services-inner-box:nth-child(1) { animation-delay: 0.1s; }
+.services-inner-box:nth-child(2) { animation-delay: 0.2s; }
+.services-inner-box:nth-child(3) { animation-delay: 0.3s; }
+.services-inner-box:nth-child(4) { animation-delay: 0.4s; }
+.services-inner-box:nth-child(5) { animation-delay: 0.5s; }
+.services-inner-box:nth-child(6) { animation-delay: 0.6s; }
+
+/* Fullstack Application Card Effect */
+.services-inner-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, rgba(196, 69, 105, 0.05) 100%);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.services-inner-box:hover::before {
+    opacity: 1;
 }
